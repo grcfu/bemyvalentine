@@ -1,0 +1,39 @@
+/* universal styler: This is commonly used for global resets or defaults. Because it affects everything, it should be used very intentionally. */
+* {
+    margin: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* i wanted more unique colors, so here is root defining them */
+:root {
+    --tickle-pink: #F283AF;
+    --champagne: #FBF4EB;
+    --blush: #FBD9E5;
+    --rose-quartz: #F9CBD6;
+    --red-wine: #9E182B;
+    --oat-milk: #F2E0D2;
+}
+
+body {
+    background-color: var(--oat-milk); /*using the var() function to call the color def*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--red-wine);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--tickle-pink);
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* here i want to try a bento box typa grid */
+main {
+    display: grid;
+    flex-wrap: wrap;
+    gap: 20 px;
+    padding: 20px;
+}
