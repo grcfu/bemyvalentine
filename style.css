@@ -63,11 +63,14 @@ th {
 
 .image-row {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 20px;
     overflow-x: auto;
-
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    margin: 0;
 }
 
 .image-row img {
