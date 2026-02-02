@@ -34,6 +34,13 @@ header {
 main {
     display: grid;
     flex-wrap: wrap;
-    gap: 20 px;
+    gap: 20px;
     padding: 20px;
+}
+
+footer {
+    background-color: var(--tickle-pink);
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
 }
