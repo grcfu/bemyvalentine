@@ -44,3 +44,46 @@ footer {
     color: white;
     font-size: 0.9rem;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse; /*this merges the lines together*/
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid var(--red-wine);
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: var(--rose-quartz)
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+
+}
+
+.image-row img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover; /* keeps images from looking squished */
+    border-radius: 10px;
+    border: 2px solid var(--blush);
+}
+
+/* rubric req: media query for responsiveness */
+@media (max-width: 600px) {
+    .image-row {
+        flex-wrap: wrap; /* this will stack images on small screens */
+    }
+    .image-row img {
+        width: 45%; /* shows images two-by-two on mobile */
+    }
+}
