@@ -65,7 +65,7 @@ th {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 20px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -74,19 +74,32 @@ th {
 }
 
 .image-row img {
-    width: 100px; 
-    height: 100px;
+    width: 200px; 
+    height: 200px;
     object-fit: cover; /* keeps images from looking squished */
     border-radius: 10px;
+    flex-shrink: 0;
     border: 2px solid var(--blush);
+    transition: transform 0.3s ease; /* smooth zoom effect??*/
+}
+
+/* im tryng to make the scrollbar cute and pink */
+.image-row::-webkit-scrollbar {
+    height: 8px;
+}
+.image-row::-webkit-scrollbar-thumb {
+    background: var(--tickle-pink);
+    border-radius: 10px;
+}
+
+.image-row img:hover {
+    transform: scale(1.05);
 }
 
 /* rubric req: media query for responsiveness */
 @media (max-width: 600px) {
-    .image-row {
-        flex-wrap: wrap; /* this will stack images on small screens */
-    }
     .image-row img {
-        width: 45%; /* shows images two-by-two on mobile */
+        width: 150px; 
+        height: 150px;
     }
 }
