@@ -36,6 +36,7 @@ main {
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    margin: 0 auto;
 }
 
 footer {
@@ -102,4 +103,104 @@ th {
         width: 150px; 
         height: 150px;
     }
+}
+
+#application {
+    background: linear-gradient(135deg, var(--blush), var(--tickle-pink));
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+#application h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--red-wine);
+    
+}
+#valentine-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#valentine-form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: -5px;
+}
+
+/* here i wanna get the enter your name place and selectin date activity */
+#valentine-form input[type="text"], 
+#valentine-form select {
+    padding: 12px;
+    border: 1px solid var(--tickle-pink);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#valentine-form option {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s ease;
+    color: var(--red-wine);
+    padding: 10px;
+}
+
+#valentine-form select:focus {
+    outline: none;
+    border-color: var(--red-wine);
+    box-shadow: 0 0 5px var(--blush);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;;
+}
+
+#submit-btn {
+    background-color: var(--red-wine);
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* super cool transition for the hover */
+    margin-top: 20px;
+    width: 100%;
+}
+
+#submit-btn:hover {
+    background-color: var(--tickle-pink);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    #application {
+        padding: 20px;
+        width: 95%;
+    }
+    main {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
+
+.checkbox-label {
+    display: flex;
+    color: var(--red-wine);
+    cursor: pointer; /* Makes it obvious the whole line is clickable */
+    margin-top: 0px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--tickle-pink); 
+    cursor: pointer;
 }
