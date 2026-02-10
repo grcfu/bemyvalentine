@@ -62,6 +62,8 @@ th {
     background-color: var(--rose-quartz)
 }
 
+
+/* working on image carousel here */
 .image-row {
     display: flex;
     flex-wrap: nowrap;
@@ -104,6 +106,8 @@ th {
         height: 150px;
     }
 }
+
+/* the application form here */
 
 #application {
     background: linear-gradient(135deg, var(--blush), var(--tickle-pink));
@@ -203,4 +207,45 @@ th {
     height: 16px;
     accent-color: var(--tickle-pink); 
     cursor: pointer;
+}
+
+
+/* accordionnn stuff here */
+.accordion {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--blush);
+    color: var(--red-wine);
+    border: dotted;
+    border-radius: 10px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--rose-quartz);
+}
+
+.accordion-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding: 15px 0;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 100px;
 }
