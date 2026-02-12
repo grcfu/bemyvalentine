@@ -137,6 +137,8 @@ header {
 
 }
 
+
+
 /* here i want to try a bento box typa grid */
 main {
     display: grid;
@@ -181,6 +183,8 @@ th {
     -webkit-overflow-scrolling: touch;
     justify-content: flex-start;
     margin: 0;
+    background: linear-gradient(to bottom, var(--red-wine) 0%, var(--oat-milk) 100%);
+    padding: 30px 15px;
 }
 
 .image-row img {
@@ -195,15 +199,18 @@ th {
 
 /* im tryng to make the scrollbar cute and pink */
 .image-row::-webkit-scrollbar {
-    height: 8px;
+    height: 10px;
 }
 .image-row::-webkit-scrollbar-thumb {
-    background: var(--tickle-pink);
+    background: linear-gradient(to right, var(--red-wine), var(--tickle-pink));
     border-radius: 10px;
+    border: 2px solid transparent;
+    
 }
 
 .image-row img:hover {
     transform: scale(1.05);
+    background: linear-gradient(to right, var(--tickle-pink), var(--rose-quartz));
 }
 
 
