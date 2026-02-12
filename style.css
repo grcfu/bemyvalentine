@@ -1,6 +1,6 @@
 /* universal styler: This is commonly used for global resets or defaults. Because it affects everything, it should be used very intentionally. */
 * {
-    margin: 10px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -22,12 +22,114 @@ body {
 }
 
 header {
-    background-color: var(--tickle-pink);
-    padding: 0px;
-    margin: 0px;
-    color: white;
+    background-color: var(--red-wine);
+    color: var(--champagne);
     text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.header-titles {
     padding: 1.5rem;
+}
+
+.small-title {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.large-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+}
+
+.hero-banner {
+    display: flex;
+}
+
+.hero-panel {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+}
+
+.hero-left img, .hero-right img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+}
+
+.hero-middle {
+    background-color: var(--champagne); 
+    color: var(--red-wine);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-middle h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; 
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.hero-middle p {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 400px; 
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: var(--red-wine);
+    color: var(--champagne);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: var(--tickle-pink);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .hero-left, .hero-right {
+        height: 300px; 
+    }
+    
+    .large-title {
+        font-size: 3rem;
+    }
+    .hero-middle h2 {
+        font-size: 2.5rem;
+    }
+    .image-row {
+        flex-wrap: wrap;
+    }
+    .image-row img {
+        width: 45%;
+        height: 150px;
+    }
 }
 
 /* here i want to try a bento box typa grid */
@@ -99,13 +201,6 @@ th {
     transform: scale(1.05);
 }
 
-/* rubric req: media query for responsiveness */
-@media (max-width: 600px) {
-    .image-row img {
-        width: 150px; 
-        height: 150px;
-    }
-}
 
 /* the application form here */
 
@@ -158,13 +253,6 @@ th {
     box-shadow: 0 0 5px var(--blush);
 }
 
-.checkbox-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;;
-}
-
 #submit-btn {
     background-color: var(--red-wine);
     color: rgba(255, 255, 255, 0.8);
@@ -197,9 +285,11 @@ th {
 
 .checkbox-label {
     display: flex;
+    align-items: center;
+    gap: 10px;
     color: var(--red-wine);
-    cursor: pointer; /* Makes it obvious the whole line is clickable */
-    margin-top: 0px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .checkbox-label input[type="checkbox"] {
