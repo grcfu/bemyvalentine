@@ -381,6 +381,143 @@ th {
     }
 }
 
+/* the new profile section here */
+.profile-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    
+    background-image: linear-gradient(rgba(158, 24, 43, 0.7), rgba(158, 24, 43, 0.7)), 
+                      url('https://i.pinimg.com/1200x/91/a9/2c/91a92c03d8823362d52ac3446ba882f7.jpg');
+
+    background-size: cover;      
+    background-position: center;  
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+}
+
+.profile-card {
+    background-image: linear-gradient(rgba(255, 245, 245, 0.9), rgba(255, 245, 245, 0.9)), 
+                      url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');
+    max-width: 800px;
+    width: 100%;
+    padding: 60px;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(158, 24, 43, 0.1);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    overflow: visible;
+}
+
+.profile-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--red-wine);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.profile-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--red-wine);
+    opacity: 0.7;
+}
+
+.profile-body {
+    margin-top: 40px;
+}
+
+.profile-fact {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    border-bottom: 1px solid rgba(158, 24, 43, 0.2);
+    padding: 15px 0;
+}
+
+.fact-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: var(--red-wine);
+    min-width: 120px;
+}
+
+.fact-value {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #4a4a4a;
+}
+
+.profile-polaroid {
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    background: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transform: rotate(6deg);
+    width: 220px;
+    transition: transform 0.3s ease;
+}
+
+.profile-polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 10;
+}
+
+.profile-polaroid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.deco-bow {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    font-size: 3rem;
+    transform: rotate(-15deg);
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        grid-template-columns: 1fr;
+        padding: 40px 25px;
+        margin-top: 60px;
+    }
+
+    .profile-main-title {
+        font-size: 2.5rem;
+    }
+
+    .profile-polaroid {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0 auto 30px;
+        transform: rotate(-3deg);
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .fact-label {
+        min-width: 80px;
+        font-size: 0.6rem;
+    }
+
+    .fact-value {
+        font-size: 1.2rem;
+    }
+}
+
 /* the why choose me section here */
 .expectations-section {
     background-image: linear-gradient(
