@@ -198,29 +198,47 @@
 
     
 
-    <section id="application">
-        <h3>Valentine Application Form</h3>
-        <form id="valentine-form">
-            <label for="name">Candidate's Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <section id="application" class="application-section">
+        <div class="form-container">
+            <div class="form-visual">
+                <div class="washi-tape"></div>
+                <h3>Applicant Agreement</h3>
+                <ul class="agreement-list">
+                    <li><span>✦</span> 99.9% uptime for emotional support.</li>
+                    <li><span>✦</span> Unlimited snack delivery protocols.</li>
+                    <li><span>✦</span> Participation in all gaming marathons.</li>
+                    <li><span>✦</span> Buldak ramen challenges accepted.</li>
+                </ul>
+                <div class="form-sticker">💖</div>
+            </div>
 
+            <div class="form-content">
+                <form id="valentine-form">
+                    <div class="input-group">
+                        <label for="name">CANDIDATE NAME</label>
+                        <input type="text" id="name" name="name" placeholder="Who's the lucky one?" required>
+                    </div>
 
-            <label for="date-type">Preferred Date Activity:</label>
-            <select id="date-type" name="date-type">
-                <option value="dinner">Fancy Dinner</option>
-                <option value="baking">Baking Cookies</option>
-                <option value="gaming">Gaming Marathon</option>
-                <option value="buldak">Spicy Buldak Challenge</option>
-                <option value="movie">Watch a Movie (Heated Rivalry??)</option>
-            </select>
-            <label class="checkbox-label">
-                <input type="checkbox" name="terms" required> 
-                I promise to provide infinite snacks and cuddles.
-            </label>
+                    <div class="input-group">
+                        <label for="date-type">PROPOSED ACTIVITY</label>
+                        <select id="date-type" name="date-type">
+                            <option value="dinner">Fancy Dinner</option>
+                            <option value="baking">Baking Cookies (Chef Meow style)</option>
+                            <option value="gaming">Gaming Marathon</option>
+                            <option value="buldak">Spicy Buldak Challenge</option>
+                            <option value="movie">Watch Fourth Wing (Again)</option>
+                        </select>
+                    </div>
 
-            <button type="submit" id="submit-btn">Submit Proposal</button>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required> 
+                        I agree to the terms of infinite cuddles.
+                    </label>
 
-        </form>
+                    <button type="submit" id="submit-btn">SEND PROPOSAL</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <div class="image-row">

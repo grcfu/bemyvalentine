@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateTimer() {
         const now = new Date();
         const difference = now - startDate;
-
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
         const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
@@ -51,9 +50,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if (valentineForm) {
         valentineForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            
+            for (let i = 0; i < 30; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'fixed';
+                heart.style.left = '50%';
+                heart.style.top = '50%';
+                heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+                heart.style.zIndex = '9999';
+                heart.style.transition = 'all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                document.body.appendChild(heart);
+
+                const x = (Math.random() - 0.5) * window.innerWidth;
+                const y = (Math.random() - 0.5) * window.innerHeight;
+
+                setTimeout(() => {
+                    heart.style.transform = `translate(${x}px, ${y}px) rotate(${Math.random() * 360}deg)`;
+                    heart.style.opacity = '0';
+                }, 50);
+
+                setTimeout(() => heart.remove(), 1000);
+            }
+
             const name = document.getElementById('name').value;
-            alert(`Proposal Submitted! Get ready for the best Valentine's Day ever, ${name}! ❤️`);
-            valentineForm.reset();
+            setTimeout(() => {
+                alert(`Proposal Submitted! Get ready for the best Valentine's Day ever, ${name}! ❤️`);
+                valentineForm.reset();
+            }, 500);
         });
     }
 });
