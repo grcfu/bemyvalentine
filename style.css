@@ -381,6 +381,130 @@ th {
     }
 }
 
+/* the why choose me section here */
+.expectations-section {
+    background-image: linear-gradient(
+        rgba(251, 244, 235, 0.8), 
+        rgba(251, 244, 235, 0.8)
+    ), 
+    url('https://m.media-amazon.com/images/I/61vn6d8EYuL._AC_SX679_.jpg');
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    padding: 100px 40px;
+    color: var(--red-wine);
+    border-top: 4px solid var(--red-wine);
+    border-bottom: 4px solid var(--red-wine);
+}
+
+.expectations-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    gap: 60px;
+    align-items: flex-start;
+    padding: 50px;
+    
+    background-color: var(--oat-milk);
+
+
+    border: 2px solid var(--red-wine);
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px var(--red-wine); 
+}
+.expectations-left {
+    flex: 1;
+    position: sticky; 
+    top: 50px;
+}
+
+.expectations-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.featured-image-container {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 15px 15px 0px var(--red-wine); 
+    border: 2px solid var(--red-wine);
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.featured-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.expectations-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-item {
+    display: flex;
+    gap: 25px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(158, 24, 43, 0.3);
+}
+
+.step-item:last-child {
+    border-bottom: 1px solid var(--rose-quartz);
+}
+
+.step-num {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 8px;
+    opacity: 0.6;
+    color: var(--red-wine);
+}
+
+.step-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .expectations-container {
+        padding: 30px;
+        box-shadow: 10px 10px 0px var(--red-wine);
+    }
+    
+    .expectations-left {
+        position: static;
+        width: 100%;
+    }
+    
+    .expectations-title {
+        font-size: 2.5rem;
+    }
+    
+    .featured-img {
+        height: 300px;
+    }
+    
+    .step-item {
+        padding: 30px 0;
+    }
+}
+
 /* the application form here */
 
 #application {
