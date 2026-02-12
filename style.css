@@ -38,11 +38,12 @@ header {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .large-title {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 400;
     margin: 0;
     line-height: 1;
@@ -124,9 +125,13 @@ header {
         height: 300px;
         object-fit: cover;
     }
+
+    .small-title {
+        font-size: 0.6rem;
+    }
     
     .large-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .hero-middle h2 {
         font-size: 2.5rem;
@@ -213,6 +218,168 @@ th {
     background: linear-gradient(to right, var(--tickle-pink), var(--rose-quartz));
 }
 
+/* the hi partner section here */
+.author-intro {
+    background-color: var(--red-wine);
+    color: var(--champagne);
+    padding: 70px 20px;
+    /* overflow: hidden; */
+    box-shadow: inset 0 20px 40px rgba(0,0,0,0.3), 
+                inset 0 -20px 40px rgba(0,0,0,0.3);
+    
+    position: relative;
+    z-index: 1;
+}
+
+.intro-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.intro-text {
+    flex: 1;
+    text-align: left;
+}
+
+.intro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.intro-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--rose-quartz);
+}
+
+.intro-description p {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+.more-about-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid var(--champagne);
+    color: var(--red-wine);
+    background-color: var(--champagne);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.intro-images {
+    flex: 1;
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polaroid {
+    position: absolute;
+    background: white;
+    padding: 15px 15px 50px 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 280px;
+    transition: transform 0.3s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.p1 {
+    top: 20px; 
+    left: 0;
+    transform: rotate(-8deg);
+    z-index: 2;
+}
+
+.p2 {
+    top: 180px;
+    right: 0;
+    transform: rotate(5deg);
+    z-index: 1;
+}
+
+.polaroid:hover {
+    z-index: 10;
+    transform: scale(1.05) rotate(0deg);
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px; 
+    }
+
+    .intro-text { 
+        text-align: center; 
+    }
+
+    .intro-images { 
+        height: auto;
+        min-height: auto; 
+        width: 100%; 
+        display: flex;
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        gap: 15px; 
+        padding-bottom: 40px; 
+    }
+
+    .polaroid { 
+        position: relative; 
+        width: 150px; 
+        padding: 8px 8px 25px 8px; 
+        margin: 0;
+        left: auto;
+        top: auto;
+    }
+
+    .polaroid img {
+        height: 160px; 
+    }
+
+    .p1 { 
+        transform: rotate(-5deg); 
+    }
+
+    .p2 { 
+        transform: rotate(5deg); 
+        margin-top: 20px;
+    }
+
+    .polaroid:hover {
+        transform: scale(1.1) rotate(0deg);
+    }
+}
 
 /* the application form here */
 
