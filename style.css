@@ -1,7 +1,7 @@
 html {
     scroll-behavior: smooth;
 }
-
+/* here's my css reset!! */
 * {
     margin: 0px;
     padding: 0px;
@@ -774,6 +774,13 @@ th {
     width: 100%;
     border-collapse: separate;
     border-spacing: 20px;
+}
+
+.calendar-note {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
 }
 
 .stopwatch-header {
