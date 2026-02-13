@@ -143,8 +143,7 @@ header {
 }
 
 
-
-/* here i want to try a bento box typa grid */
+/* heres like main, footer, etc. */
 main {
     display: grid;
     flex-wrap: wrap;
@@ -154,10 +153,77 @@ main {
 }
 
 footer {
-    background-color: var(--tickle-pink);
+    background-color: var(--red-wine);
+    color: var(--champagne);
+    padding: 60px 20px;
     text-align: center;
-    color: white;
-    font-size: 0.9rem;
+    border-top: 8px solid var(--tickle-pink);
+    margin-top: 40px;
+}
+
+.footer-heart {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: heartPulse 1.5s infinite ease-in-out;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    color: var(--champagne);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-links a:hover {
+    color: var(--tickle-pink);
+    transform: translateY(-5px);
+    border-bottom: 1px solid var(--tickle-pink);
+}
+
+.footer-credits {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.footer-credits span {
+    font-weight: 700;
+    font-style: normal;
+    color: var(--tickle-pink);
+    letter-spacing: 1px;
+}
+
+.footer-year {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    text-transform: uppercase;
+}
+
+@keyframes heartPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+@media (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 table {
@@ -917,8 +983,11 @@ th {
         text-align: center;
     }
     .washi-tape {
-        left: 50%;
-        margin-left: -60px;
+        left: 5px;           
+        top: -10px;          
+        margin-left: 0;     
+        width: 90px;        
+        transform: rotate(-10deg);
     }
 }
 
@@ -929,6 +998,7 @@ th {
     color: var(--red-wine);
     cursor: pointer;
     margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .checkbox-label input[type="checkbox"] {
