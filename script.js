@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     heart.style.opacity = '0';
                 }, 50);
 
-                setTimeout(() => heart.remove(), 1000);
+                setTimeout(() => heart.remove(), 1800);
             }
 
             const name = document.getElementById('name').value;
@@ -80,4 +80,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
         });
     }
+
+    let lastSpawnTime = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        const now = Date.now();
+        if (now - lastSpawnTime > 50) { 
+            const heart = document.createElement('div');
+            heart.className = 'cursor-heart';
+            heart.innerHTML = '❤️';
+            
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            
+            const size = Math.random() * 15 + 10;
+            heart.style.fontSize = size + 'px';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 1200);
+            
+            lastSpawnTime = now;
+        }
+    });
 });

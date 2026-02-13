@@ -1,4 +1,7 @@
-/* universal styler: This is commonly used for global resets or defaults. Because it affects everything, it should be used very intentionally. */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -27,10 +30,13 @@ header {
     text-align: center;
     padding: 0;
     margin: 0;
+
 }
 
 .header-titles {
     padding: 1.5rem;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
 .small-title {
@@ -1047,4 +1053,26 @@ th {
 
 .accordion-item.active .accordion-content {
     max-height: 100px;
+}
+
+/* cursor magic lol */
+.cursor-heart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    pointer-events: none;
+    z-index: 10000;
+    animation: fallAndFade 1.8s linear forwards;
+}
+
+@keyframes fallAndFade {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100px) rotate(45deg) scale(0.5);
+        opacity: 0;
+    }
 }
