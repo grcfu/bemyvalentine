@@ -1,4 +1,4 @@
-# 💌 Partner Onboarding Portal (v2026.0)
+# 💌 Happy Valentine's Day!
 
 A high-performance digital scrapbook and "Partner Retention" application designed to fix the broken Valentine's card workflow. Built with a focus on clean **UI/UX**, interactive **DOM manipulation**, and a scarcely legal amount of pink.
 
